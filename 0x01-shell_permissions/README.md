@@ -1,1 +1,18 @@
 # Shell permissions
+- 0. My name is Betty: Create a script that changes your user ID 
+- 1. Who am I: script that prints the effective userid of the current user
+- 2. Groups: script that prints all the groups the current user is part of
+- 3. New owner:  script that changes the owner of the file to another user
+- 4. Empty!: script that creates an empty file
+- 5. Execute: script that adds execute permission to the owner of the file
+- 6. Multiple permissions: script that adds execute permission to the owner and the group owner, and read permission to other users
+- 7. Everybody!: script that adds execution permission to the owner, the group owner and the other users
+- 8. James Bond: script that sets the permission to the file hello as follows:Owner: no permission at all, Group: no permission at all and Other users: all the permission
+- 9. John Doe: script that sets the mode of the file
+- 10. Look in the mirror:  script that sets the mode of a file as the same asanother file mode
+- 11. Directories: script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users. Regular files should not be changed
+- 12. More directories: script that creates a directory called dir-name with permissions 751 in the working directory
+- 13. Change group:  script that changes the group owner
+- 14. Owner and group:  script that changes the owner and the group owner for all the files and directories in the working directory
+- 15. Symbolic links: script that changes the owner and the group owner of a file _symbolic file
+- 16. If only:  script that changes the owner of the file only if it is owned by an another user 
