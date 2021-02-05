@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Shell script to print minutes and hour until 12 hours
+HOUR=1
+while [ $HOUR -le 12 ]; do
+    MINUTE=1
+    while [ $MINUTE -le 60 ]; do
+	if [ $MINUTE == 60 ]; then
+	    echo "Hour: $HOUR"
+	else
+	    echo "$MINUTE"
+	fi
+	MINUTE=$((MINUTE + 1))
+    done
+    HOUR=$((HOUR + 1))
+done
