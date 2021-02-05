@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Shell script to print 10 times Holberton School using while loop
+SCHOOL="Holberton School"
+COUNT=1
+while [ $COUNT -le 10 ]; do
+    echo "$SCHOOL"
+    COUNT=$((COUNT + 1))
+done
