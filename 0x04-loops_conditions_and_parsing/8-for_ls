@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Print name of files in the current directory excluding number and dash
+CMD="$(ls)"
+for file in $CMD; do
+    echo "$file" | cut -f 2 -d '-'
+done
