@@ -3,10 +3,9 @@
 SCHOOL="Holberton School"
 COUNT=1
 while [ $COUNT -le 10 ]; do
+    echo "$SCHOOL"
     if [ $COUNT == 9 ]; then
 	echo "Hi"
-    else
-	echo "$SCHOOL"
     fi
     COUNT=$((COUNT + 1))
 done
