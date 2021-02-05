@@ -2,11 +2,13 @@
 # Shell script to print minutes and hour until 12 hours
 echo "Hour: 0"
 HOUR=1
-while [ $HOUR -le 12 ]; do
+while [ $HOUR -le 13 ]; do
     MINUTE=1
     while [ $MINUTE -le 60 ]; do
 	if [ $MINUTE == 60 ]; then
-	    echo "Hour: $HOUR"
+	    if [ $HOUR != 13 ]; then
+		echo "Hour: $HOUR"
+	    fi
 	else
 	    echo "$MINUTE"
 	fi
