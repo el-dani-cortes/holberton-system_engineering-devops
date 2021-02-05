@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Shell script to print minutes and hour until 12 hours
+echo "Hour: 0"
 HOUR=1
 while [ $HOUR -le 12 ]; do
     MINUTE=1
