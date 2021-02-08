@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Bash script that creates a file, mae a  infinity loop and add differents signal handlers
+
+touch holbertonscript.pid
+echo $$ >> holbertonscript.pid
+sudo mv holbertonscript.pid /var/run/
+while true; do
+    trap "echo I hate the kill command && sudo rm /var/run/holbertonscript.pid && exit" SIGTERM SIGQUIT
+    trap "echo Y U no love me?!" SIGINT
+    echo "To infinity and beyond"
+    sleep 2
+done
