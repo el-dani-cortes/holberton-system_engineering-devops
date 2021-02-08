@@ -32,23 +32,5 @@ case "$1" in
 	restart
 	;;
     *)
-       echo "Usage: $0 {start|stop|restart}"
+       echo "Usage: manage_my_process {start|stop|restart}"
 esac
-
-exit 0
-
-
-
-
-
-
-
-
-touch holbertonscript.pid
-echo $$ >> holbertonscript.pid
-sudo mv holbertonscript.pid /var/run/
-while true; do
-    
-    trap "echo Y U no love me?!" SIGINT
-    echo "To infinity and beyond"
-done
