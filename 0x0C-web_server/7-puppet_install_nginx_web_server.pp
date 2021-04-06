@@ -31,9 +31,9 @@ exec { 'Edit config nginx file to redirect to another page':
   provider => 'shell',
 }
 ->
-# Edit a configuration file to redirect to another page
-exec { 'Edit config nginx file to redirect to another page':
-  command  => 'sed -i "42i \\\n\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=3MbaGJN2ioQ;\n\t}\n" /etc/nginx/sites-available/default',
+# Restart web server
+exec { 'Restart web server':
+  command  => 'service nginx restart'
   user     => 'root',
   provider => 'shell',
 }
