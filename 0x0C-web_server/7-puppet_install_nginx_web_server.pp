@@ -4,7 +4,6 @@
 include stdlib
 
 # Install nginx package
-
 exec { 'Update':
   command  => 'apt-get update',
   user     => 'root',
@@ -23,6 +22,13 @@ file { 'Insert a string in index.html':
   group   => 'root',
   mode    => '0644',
   content => 'Holberton School',
+}
+->
+# Edit a configuration file to redirect to another page
+exec { 'Edit config nginx file to redirect to another page':
+  command  => 'sed -i "42i \\\n\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=3MbaGJN2ioQ;\n\t}\n" /etc/nginx/sites-available/default',
+  user     => 'root',
+  provider => 'shell',
 }
 ->
 # Edit a configuration file to redirect to another page
