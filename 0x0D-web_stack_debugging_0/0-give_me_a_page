@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to fix a bug with  GET request with docker
+# Script to start apache2 web server
+/etc/init.d/apache2 start
