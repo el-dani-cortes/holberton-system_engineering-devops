@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Script to fix a bug in the server
-pkill nginx
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx stop
