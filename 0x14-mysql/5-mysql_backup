@@ -2,4 +2,4 @@
 # Bash script to do a MySQL backup
 mysqldump -u root -p "$1" --all-databases > backup.sql
 time=$(date +'%d-%m-%y')
-tar -zcvf "$time.tar.gz" ./backup.sql
+tar -zcvf "$time.tar.gz" backup.sql
