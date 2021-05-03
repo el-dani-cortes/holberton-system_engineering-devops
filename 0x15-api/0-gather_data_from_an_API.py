@@ -2,9 +2,8 @@
 """
 Module to Gather data from an API (jsonplaceholder.typicode.com)
 """
-import requests
 from sys import argv
-from string import capwords
+import requests
 
 
 def main(argv):
