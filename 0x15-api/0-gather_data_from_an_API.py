@@ -2,8 +2,8 @@
 """
 Module to Gather data from an API (jsonplaceholder.typicode.com)
 """
-from sys import argv
 import requests
+from sys import argv
 
 
 def main(argv):
