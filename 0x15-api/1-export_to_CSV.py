@@ -2,9 +2,9 @@
 """
 Module to Gather data from an API (jsonplaceholder.typicode.com)
 """
+import csv
 import requests
 from sys import argv
-import csv
 
 
 def main(argv):
