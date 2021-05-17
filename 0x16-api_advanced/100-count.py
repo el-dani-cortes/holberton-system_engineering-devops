@@ -12,7 +12,8 @@ def counter(word_list, hot_list):
     words_count = {}
     for item in word_list:
         words_count[item.lower()] = 0
-    for word in words_count:
+    for word in word_list:
+        word = word.lower()
         for title in hot_list:
             title_words = title.split()
             for item in title_words:
