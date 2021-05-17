@@ -16,13 +16,13 @@ def counter(word_list, hot_list):
         word = word.lower()
         for title in hot_list:
             title_words = title.split()
-            if word in title_words:
-                words_count[word] += 1
+            for item in title_words:
+                if word == item:
+                    words_count[word] += 1
     for key, value in sorted(words_count.items(), key=lambda x: (-x[1], x[0])):
         if value != 0:
-            print("{}:{}".format(key, value))
-    return(words_count)
-
+            print("{}: {}".format(key, value))
+    return(None)
 
 def count_words(subreddit, word_list, hot_list=[], params={}):
     """
