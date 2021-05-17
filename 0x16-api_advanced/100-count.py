@@ -11,9 +11,8 @@ def counter(word_list, hot_list):
     """
     words_count = {}
     for item in word_list:
-        words_count[item] = 0
+        words_count[item.lower()] = 0
     for word in words_count:
-        word = word.lower()
         for title in hot_list:
             title_words = title.split()
             for item in title_words:
@@ -23,6 +22,7 @@ def counter(word_list, hot_list):
         if value != 0:
             print("{}: {}".format(key, value))
     return(None)
+
 
 def count_words(subreddit, word_list, hot_list=[], params={}):
     """
