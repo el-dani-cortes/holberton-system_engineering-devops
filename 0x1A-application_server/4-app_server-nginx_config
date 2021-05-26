@@ -47,7 +47,13 @@ server {
         location /airbnb-dynamic/number_odd_or_even/ {
                  rewrite /airbnb-dynamic/number_odd_or_even/(.*) $1 break;
                  include proxy_params;
-                 proxy_pass http://localhost:5001/number_odd_or_even/$1;
+                 proxy_pass http://127.0.0.1:5001/number_odd_or_even/$1;
+        }
+
+        location /api/ {
+                 rewrite /api/(.*) $1 break;
+                 include proxy_params;
+                 proxy_pass http://127.0.0.1:5002/api/$1;
         }
 
         # include snippets/snakeoil.conf;
